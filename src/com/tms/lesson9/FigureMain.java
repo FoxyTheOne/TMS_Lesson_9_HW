@@ -1,11 +1,11 @@
 package com.tms.lesson9;
 
 import com.tms.lesson9.exception.ExistsException;
-import com.tms.lesson9.prog00Figure.figure.IFigure;
-import com.tms.lesson9.prog00Figure.figure.circle.Circle;
-import com.tms.lesson9.prog00Figure.figure.rectangle.Rectangle;
-import com.tms.lesson9.prog00Figure.figure.triangle.Triangle;
-import com.tms.lesson9.prog00Figure.figureCode.FigureCode;
+import com.tms.lesson9.prog00Figure.Figure;
+import com.tms.lesson9.prog00Figure.IFigure;
+import com.tms.lesson9.prog00Figure.circle.Circle;
+import com.tms.lesson9.prog00Figure.rectangle.Rectangle;
+import com.tms.lesson9.prog00Figure.triangle.Triangle;
 
 /**
  * 0. Написать иерархию классов «Фигуры»: Фигура -> Треугольник -> Прямоугольник -> Круг.
@@ -17,7 +17,7 @@ public class FigureMain {
     public static void main(String[] args) {
         try {
             //Выбираем фигуру для расчёта (1-3)
-            FigureCode figureCode = new FigureCode(1);
+            Figure figureCode = new Figure(1);
 
             //Создаём объект выбранной фигуры (в метод ниже передаём код фигуры, введенный выше)
             IFigure iFigure = getFigureByCode(figureCode.getFigureCode());
